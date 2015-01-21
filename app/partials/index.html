@@ -1,0 +1,23 @@
+<div class="main-content">
+    <form class="github-form">
+      <div class="form-group">
+        <label for="exampleInputEmail1">Enter name</label>
+        <input type="text" class="form-control" id="inputName" placeholder="Enter name" ng-model="name">
+      </div> 
+      <button type="submit" class="btn btn-primary" ng-click="getList()">Submit</button>
+    </form>
+    <div>
+        
+        <p>List of repositories: </p>
+        <ul ng-repeat="repository in githubList" class="repo-list">
+            <li>
+              <a href="{{repository.html_url}}">
+                  {{repository.name}}
+              </a>
+            <li>
+        </ul>
+        <p>{{ error }}</p>
+
+    </div>    
+</div>
+
